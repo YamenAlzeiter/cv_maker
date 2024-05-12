@@ -218,17 +218,18 @@ export const OutputS2 = ({cv}: Props) => {
 
         return (
             <>
-                <h1 className=' mt-3 font-light'>AWARDS AND ACHIEVEMENTS</h1>
+                <h1 className=' mt-3 font-bold'>AWARDS AND ACHIEVEMENTS</h1>
                 <hr className='hr  mb-4'/>
                 {personalDetails.map((section, index) => (
                     <div className='inline' key={index}>
 
                         {section.subSection.map((subSection) => (
                         <>
-                        {subSection.type === "Award Title" && <li className='font-bold list-disc'>
-                                {subSection.type === "Award Title" && subSection.value != '' &&
-                                    <>{subSection.value}: <span className="font-light">{rewardDescription(section)}</span></>}
-                            </li>}
+                        {subSection.type === "Award Title" && <>
+                                {subSection.type === "Award Title"
+                                 && subSection.value != ''
+                                  && <li className='font-bold list-disc'>{subSection.value}: <span className="font-light">{rewardDescription(section)}</span></li>}
+                            </>}
                         </>
                         ))}
 
