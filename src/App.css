@@ -1,0 +1,13 @@
+/* General Styles */
+
+#root {
+    max-width: 1480px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.a4 {
+    min-height: 29.7cm;
+    height: auto;
+    width: 21cm;
+}
